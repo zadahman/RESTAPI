@@ -7,7 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers();
-builder.Services.AddDbContext<ContactDbContext>(option => option.UseInMemoryDatabase("ContactList"));
+//builder.Services.AddDbContext<ContactDbContext>(option => option.UseInMemoryDatabase("ContactList"));
+builder.Services.AddDbContext<RecordDbContext>(option => option.UseInMemoryDatabase("Records"));
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
